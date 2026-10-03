@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editora Caldeirão Mágico</title>
+    <meta name="description" content="Editora Caldeirão Mágico: a dose de magia que a sua estante precisava. Lançamentos, catálogo e envio de originais.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Figtree:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header class="topo">
+    <a href="#inicio" class="marca" aria-label="Editora Caldeirão Mágico, ir ao início">
+        <img src="img/logo-completo.png" alt="Editora Caldeirão Mágico">
+    </a>
+    <nav aria-label="Principal">
+        <a href="#inicio">Início</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#originais">Envio de originais</a>
+        <a href="#comprar" class="nav-comprar">Comprar</a>
+    </nav>
+</header>
+
+<main>
+    <section id="inicio" class="hero">
+        <div class="hero-texto">
+            <p class="chamada">A dose de magia que a sua estante precisava.</p>
+            <img src="img/Ativo 1@2x.png" width="480" height="220">
+            <p class="hero-sub">Romantasia de Mell Alves. Destinos entrelaçados, sacrifícios e criaturas cósmicas.</p>
+            <div class="acoes">
+                <a href="#catalogo" class="btn">Conhecer o lançamento</a>
+                <a href="#originais" class="btn btn-contorno">Enviar meu original</a>
+            </div>
+        </div>
+
+       <img class="capa-img" src="img/capa-3d.png" alt="Capa do livro A Queda da Estrela, de Mell Alves">
+    </section>
+
+    <section id="catalogo" class="secao">
+        <h2>Catálogo</h2>
+        <article class="livro">
+            <div class="livro-info">
+                <h3>A Queda da Estrela</h3>
+                <p class="autoria">Mell Alves &middot; Romantasia</p>
+                <p>Destinos entrelaçados, sacrifícios e criaturas cósmicas em uma história que mistura romance e fantasia.</p>
+                <ul class="selos">
+                    <li>E-book</li>
+                    <li>Kindle</li>
+                    <li>Disponível na Amazon</li>
+                </ul>
+                
+                
+            </div>
+        </article>
+    </section>
+    
+     <section id="comprar" class="secao">
+
+    <nav class="migalhas" aria-label="Você está em">
+        <a href="#inicio">Home</a>
+        <span aria-hidden="true">›</span>
+        <span aria-current="page">A Queda da Estrela</span>
+    </nav>
+
+    <div class="prod">
+
+        <div class="prod-midia">
+            <div class="prod-foto">
+                <img src="img/capa-3d.png" alt="Livro físico A Queda da Estrela, de Mell Alves">
+            </div>
+            <div class="compartilhar">
+                <button type="button" class="redonda link" id="share-link" aria-label="Copiar link"><i class="fa-solid fa-link"></i></button>
+                <a class="redonda whats" id="share-whats" href="#" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a class="redonda face" id="share-face" href="#" target="_blank" rel="noopener" aria-label="Compartilhar no Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a class="redonda xis" id="share-x" href="#" target="_blank" rel="noopener" aria-label="Compartilhar no X"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="prod-info">
+            <h2>A Queda da Estrela</h2>
+            <p class="prod-desc">
+                Asteryn Fallere é uma garota sem magia num mundo implacável. Quando fendas misteriosas começam a rasgar a terra e a magia do reino passa a falhar, ela precisa cruzar o caminho de Nyxen Valerius, o temido Rei de Asthalia.
+            </p>
+            <hr>
+
+            <p class="prod-preco">
+                <strong id="preco-total">R$ 59,90</strong>
+                <span id="parcelas">ou 2 x R$ 29,95</span>
+            </p>
+
+            <div class="comprar-linha">
+                <div class="qtd">
+                    <button type="button" id="menos" aria-label="Diminuir quantidade">−</button>
+                    <input type="number" id="qtd" value="1" min="1" max="10" aria-label="Quantidade">
+                    <button type="button" id="mais" aria-label="Aumentar quantidade">+</button>
+                </div>
+                <button type="button" class="btn btn-add" id="adicionar">
+                    <i class="fa-solid fa-cart-shopping"></i> Adicionar
+                </button>
+            </div>
+            <p class="confirmacao" id="msg" role="status"></p>
+
+            <details class="acordeao">
+                <summary>
+                    <i class="fa-solid fa-truck"></i> Calcular frete
+                    <i class="fa-solid fa-chevron-down seta"></i>
+                </summary>
+                <div class="acordeao-corpo">
+                    <label for="cep">Digite seu CEP</label>
+                    <div class="cep-linha">
+                        <input type="text" id="cep" inputmode="numeric" maxlength="9" placeholder="00000-000">
+                        <button type="button" class="btn" id="calc-frete">Calcular</button>
+                    </div>
+                    <p id="frete-res" role="status"></p>
+                </div>
+            </details>
+
+            <details class="acordeao">
+                <summary>
+                    <i class="fa-solid fa-credit-card"></i> Formas de pagamento
+                    <i class="fa-solid fa-chevron-down seta"></i>
+                </summary>
+                <div class="acordeao-corpo">
+                    <p>Pix, cartão de crédito em até 2x sem juros e boleto.</p>
+                </div>
+            </details>
+        </div>
+    </div>
+
+    <div class="prod-baixo">
+        <div class="cartao">
+            <h3>Detalhes do produto</h3>
+            <dl class="detalhes">
+                <div><dt>Autora</dt><dd>Mell Alves</dd></div>
+                <div><dt>Editora</dt><dd>Caldeirão Mágico</dd></div>
+                <div><dt>Gênero</dt><dd>Romantasia</dd></div>
+                <div><dt>Formato</dt><dd>Livro físico</dd></div>
+            </dl>
+        </div>
+
+        <div class="cartao">
+            <h3>Também disponível</h3>
+            <p>Prefere ler na tela? <strong>A Queda da Estrela</strong> também tem versão e-book para Kindle.</p>
+            <a href="https://www.amazon.com.br/" class="btn" target="_blank" rel="noopener">Comprar na Amazon</a>
+        </div>
+    </div>
+    </section>
+
+    <section id="originais" class="secao originais">
+        <h2>Envio de originais</h2>
+        <p>Escreve fantasia ou romantasia e quer ver sua história na estante? Mande seu original para a gente pelo nosso link.</p>
+        <a href="https://linktr.ee/caldeiraomagico" class="btn" target="_blank" rel="noopener">Enviar original</a>
+    </section>
+</main>
+
+<footer class="rodape">
+    <p>Siga a editora no Instagram: <a href="https://www.instagram.com/editoracaldeirao" target="_blank" rel="noopener">@editoracaldeirao</a></p>
+    <p>&copy; 2026 Editora Caldeirão Mágico. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    const PRECO = 59.90;
+    const brl = v => v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+    const qtd = document.getElementById('qtd');
+    const precoTotal = document.getElementById('preco-total');
+    const parcelas = document.getElementById('parcelas');
+    const msg = document.getElementById('msg');
+
+    function quantidade() {
+        return Math.min(10, Math.max(1, parseInt(qtd.value) || 1));
+    }
+
+    function atualizar() {
+        const q = quantidade();
+        qtd.value = q;
+        const total = q * PRECO;
+        precoTotal.textContent = brl(total);
+        parcelas.textContent = 'ou 2 x ' + brl(total / 2);
+    }
+
+    document.getElementById('mais').addEventListener('click', () => { qtd.value = quantidade() + 1; atualizar(); });
+    document.getElementById('menos').addEventListener('click', () => { qtd.value = quantidade() - 1; atualizar(); });
+    qtd.addEventListener('change', atualizar);
+
+    document.getElementById('adicionar').addEventListener('click', () => {
+        const q = quantidade();
+        msg.textContent = q + (q === 1 ? ' unidade adicionada' : ' unidades adicionadas') + ' ao carrinho.';
+    });
+
+    document.getElementById('calc-frete').addEventListener('click', () => {
+        const cep = document.getElementById('cep').value.replace(/\D/g, '');
+        document.getElementById('frete-res').textContent = cep.length === 8
+            ? 'Frete: R$ 14,90. Entrega em 5 a 8 dias úteis.'
+            : 'Digite um CEP com 8 números.';
+    });
+
+    const url = encodeURIComponent(location.href);
+    document.getElementById('share-whats').href = 'https://wa.me/?text=' + url;
+    document.getElementById('share-face').href = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+    document.getElementById('share-x').href = 'https://twitter.com/intent/tweet?url=' + url;
+    document.getElementById('share-link').addEventListener('click', () => {
+        navigator.clipboard.writeText(location.href).then(() => { msg.textContent = 'Link copiado!'; });
+    });
+</script>
+
+</body>
+</html>
